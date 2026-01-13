@@ -3,11 +3,11 @@ from imagekitio import ImageKit
 
 
 def get_imagekit_client():
-    return ImageKit(
-        public_key=os.environ.get("IMAGEKIT_PUBLIC_KEY"),
-        private_key=os.environ.get("IMAGEKIT_PRIVATE_KEY"),
-        url_endpoint=os.environ.get("IMAGEKIT_URL_ENDPOINT", "https://ik.imagekit.io/default")
-    )
+    return ImageKit()
+        #public_key=os.environ.get("IMAGEKIT_PUBLIC_KEY"),
+        #private_key=os.environ.get("IMAGEKIT_PRIVATE_KEY"),
+        #url_endpoint=os.environ.get("IMAGEKIT_URL_ENDPOINT", "https://ik.imagekit.io/default")
+    
 
 
 def _get_watermark_transformation(username: str):
