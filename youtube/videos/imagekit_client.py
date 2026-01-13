@@ -51,15 +51,13 @@ def add_image_watermark(
 
 
 def upload_video(file_data: bytes, file_name: str, folder: str = "videos") -> dict:
-    client = get_imagekit_client()
+    #client = get_imagekit_client()
     
-    response = client.upload_file(
+    response = imagekit.files.upload(
         file=file_data,
         file_name=file_name,
-        options={
-            "folder": folder,
-            "use_unique_file_name": True,
-        }
+        folder=folder,
+        use_unique_file_name=True,
     )
     
     return {
@@ -95,6 +93,6 @@ def upload_thumbnail(file_data: str, file_name: str, folder: str = "thumbnails")
 
 
 def delete_video(file_id: str) -> bool:
-    client = get_imagekit_client()
-    client.delete_file(file_id=file_id)
+    #client = get_imagekit_client()
+    imagekit.files.delete(file_id=file_id)
     return True
