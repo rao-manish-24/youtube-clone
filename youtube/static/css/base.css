@@ -16,6 +16,64 @@ body {
     line-height: 1.6;
 }
 
+/* Auth Disclaimer Banner */
+.auth-disclaimer {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    border-bottom: 1px solid var(--border-color);
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.disclaimer-icon {
+    font-size: 1.2rem;
+}
+
+.disclaimer-text {
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.disclaimer-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.disclaimer-btn {
+    padding: 8px 20px;
+    border-radius: var(--radius-full);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all var(--transition-fast);
+}
+
+.disclaimer-btn.btn-signin {
+    background: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--text-secondary);
+}
+
+.disclaimer-btn.btn-signin:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--text-primary);
+}
+
+.disclaimer-btn.btn-signup {
+    background: var(--accent-red);
+    color: white;
+    border: 1px solid var(--accent-red);
+}
+
+.disclaimer-btn.btn-signup:hover {
+    background: var(--accent-red-hover);
+    border-color: var(--accent-red-hover);
+}
+
 /* Main Content Container */
 .main-content {
     max-width: 1200px;
