@@ -37,6 +37,18 @@
             {% endif %}
         </ul>
     </nav>
+    
+    {% if not user.is_authenticated %}
+    <div class="auth-disclaimer">
+        <span class="disclaimer-icon">🔒</span>
+        <span class="disclaimer-text">Sign up and sign in to watch and play videos</span>
+        <div class="disclaimer-actions">
+            <a href="{% url 'accounts:login' %}" class="disclaimer-btn btn-signin">Sign In</a>
+            <a href="{% url 'accounts:register' %}" class="disclaimer-btn btn-signup">Sign Up</a>
+        </div>
+    </div>
+    {% endif %}
+
     <main class="main-content">
         {% if messages %}
             <ul class="messages">
